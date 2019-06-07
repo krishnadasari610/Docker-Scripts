@@ -1,0 +1,21 @@
+FROM rapiscansystems/malibu-mainapp-base:Barebones
+
+
+# Declaring username using Environment variables
+ENV ZICONS_USERNAME zicons
+#ENV ZICONS_PASSWORD rapi@123
+#Assigning directories to Environment variables
+ENV USER_ACCOUNTS_HOME_DIRECTORY /home
+ENV ZICON_HOME_DIRECTORY $USER_ACCOUNTS_HOME_DIRECTORY/$ZICONS_USERNAME
+ENV MALIBU_SETUP_SCRIPTS_DIRECTORY $ZICON_HOME_DIRECTORY/project
+ENV MALIBU_SETUP_SCRIPT $MALIBU_SETUP_SCRIPTS_DIRECTORY/malibu-libraries.sh
+ENV WORK_DIRECTORY $ZICON_HOME_DIRECTORY/rapiscan/malibu
+ 
+#Adding user 
+RUN useradd -m $ZICONS_USERNAME
+#SUDO access to USER
+RUN adduser $ZICONS_USERNAME sudo
+
+#Creating directory to copy required libraries
+RUN mkdir $MALIBU_SETUP_SCRIPTS_DIRECTORY
+

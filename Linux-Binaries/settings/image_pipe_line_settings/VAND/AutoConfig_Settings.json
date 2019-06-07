@@ -1,0 +1,9 @@
+{
+"Configs":
+	[
+		{"Name" : "EVelocityHandler" ,"ObserversList" : ["DaqEngineImageMeta","HostBeltStatus"],"SettingsFilePath": "Evelocity_Settings.txt"    , "CycleTime" : 500,"Argument":""},
+		{"Name" : "BhsController"    ,"ObserversList" : ["HostBeltCommand"]                    ,"SettingsFilePath": "BhsController_Settings.txt", "CycleTime" : 500,"Argument":""},
+		{"Name" : "ModbusController"    ,"ObserversList" : ["HostBeltCommand"]                    ,"SettingsFilePath": "CT_Modbus_Params.json", "CycleTime" : 500,"Argument":""}
+		
+	]
+}

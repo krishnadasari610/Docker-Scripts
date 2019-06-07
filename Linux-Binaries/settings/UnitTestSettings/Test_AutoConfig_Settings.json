@@ -1,0 +1,8 @@
+{
+"Configs":
+	[
+		{"Name" : "WebSocket","ObserversList" : ["CmdGeneratorMessageData"]  ,"SettingsFilePath": "WebSocketSettings.txt", "CycleTime" : 100,"Argument":""},
+		{"Name" : "DaqEngine","ObserversList" : ["FileIoImageMeta","ModelData"],"SettingsFilePath": "DaqSettings.txt","CycleTime" : 300,"Argument":""},
+		{"Name" : "Algorithm1"     ,"ObserversList" : ["DaqEngineImageMeta"]  ,"SettingsFilePath": "Algorithm1Settings.txt", "CycleTime" : 500,"Argument":"VAND"}
+	]
+}

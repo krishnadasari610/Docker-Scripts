@@ -1,0 +1,38 @@
+#!/bin/bash
+
+# RapiScan directory path
+RAPI_SCAN_DIRECTORY=$HOME/rapiscan
+
+# Permission mode of the directory tree
+UMASK=700
+
+# Remove if Rapiscan direcoty exist
+if [ -d $RAPI_SCAN_DIRECTORY ]; then
+    rm -dR $RAPI_SCAN_DIRECTORY
+fi
+
+# Sub directories of the Rapiscan directory
+MALIBU_DIRECTORY=$RAPI_SCAN_DIRECTORY/malibu
+LOG_DIRECTORY=$MALIBU_DIRECTORY/log
+#SETTINGS_DIRECTORY=$MALIBU_DIRECTORY/settings
+ACCEPT_DIRECTORY=$MALIBU_DIRECTORY/accept
+REJECT_DIRECTORY=$MALIBU_DIRECTORY/reject
+PENDING_DIRECTORY=$MALIBU_DIRECTORY/pending
+LICENSE_DIRECTORY=$MALIBU_DIRECTORY/license
+
+# Create Rapiscan directory tree
+mkdir -p -m $UMASK $MALIBU_DIRECTORY
+mkdir -p -m $UMASK $LOG_DIRECTORY
+#mkdir -p -m $UMASK $SETTINGS_DIRECTORY
+mkdir -p -m $UMASK $ACCEPT_DIRECTORY
+mkdir -p -m $UMASK $REJECT_DIRECTORY
+mkdir -p -m $UMASK $PENDING_DIRECTORY
+mkdir -p -m $UMASK $LICENSE_DIRECTORY
+
+# Copy necessary files into Rapiscan/Malibu direcotory
+
+MALIBU_SETTINGS_SOURCE=$HOME/project/Linux-Binaries/
+MALIBU_SETTINGS_DESTINATION=$MALIBU_DIRECTORY
+
+cp -Ri $MALIBU_SETTINGS_SOURCE/* $MALIBU_SETTINGS_DESTINATION
+#tar -C $MALIBU_SETTING_DESTINATION -tvzf $MALIBU_SETTINGS_TAR_SOURCE

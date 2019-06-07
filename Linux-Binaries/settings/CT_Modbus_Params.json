@@ -1,0 +1,23 @@
+{"protocol":"TCP",
+"slave-ip":"10.204.211.173",
+"port":502,
+"heartbeat-interval-ms":4000,
+"readtags":[
+{
+    "name":"CT_Status",
+    "funcode":"F03",
+    "address":1,
+    "datatype":"short",
+    "size":1
+}
+],
+"writetags":[
+{
+    "name":"CT_Control",
+    "funcode":"F06",
+    "address":1,
+    "datatype":"short",
+    "size":1
+ }
+]
+}
