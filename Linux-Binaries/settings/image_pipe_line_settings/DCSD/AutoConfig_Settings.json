@@ -1,7 +1,0 @@
-{
-"Configs":
-	[
-		{"Name" : "WebSocket"       ,"ObserversList" : ["CmdGeneratorMessageData"]  						 ,"SettingsFilePath": "WebSocket_Settings.txt", "CycleTime" : 10,"Argument":""},
-		{"Name" : "UiDataProvider"  ,"ObserversList" : ["DaqEngineImageMeta","WebSocketCmdData","AlgoToUi"]  ,"SettingsFilePath": ""                      , "CycleTime" : 10,"Argument":""}
-	]
-}
